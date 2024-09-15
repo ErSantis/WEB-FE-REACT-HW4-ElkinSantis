@@ -1,8 +1,43 @@
-# React + Vite
+# Smartwatch Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Smartwatch Pro is a web application designed to showcase the features, diagnostics, and strategic goals of an innovative smartwatch. It utilizes React and Tailwind CSS to provide a responsive and modern interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Header**: Displays the title and an attractive slogan.
+- **Introduction**: Describes the product and its benefits.
+- **Diagnosis**: Shows an analysis of weaknesses, opportunities, strengths, and threats (SWOT).
+- **Organizational Identity**: Defines the company's mission, vision, and policies.
+- **Strategic Objectives**: Presents a table with the company's objectives and their progress.
+- **Footer**: Copyright information.
+
+## Technologies Used
+
+- **React**: Library for building user interfaces.
+- **Tailwind CSS**: CSS framework for a responsive and modern design.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ErSantis/WEB-FE-REACT-HW4-ElkinSantis.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd WEB-FE-REACT-HW4-ElkinSantis
+   ```
+
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Run the application:
+   ```bash
+   npm start
+   ```
+
+
