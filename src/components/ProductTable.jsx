@@ -20,7 +20,7 @@ const ProductTable = () => {
     <section className="p-6">
       <table className="min-w-full mt-4 border border-gray-300">
         <thead>
-          <tr className="bg-gray-200 text-xs sm:text-base">
+          <tr className="bg-digital-lavender-very-light text-xs sm:text-base">
             <th className="border border-gray-300 p-2">Code</th>
             <th className="border border-gray-300 p-2">Objective</th>
             <th className="border border-gray-300 p-2">Target</th>
