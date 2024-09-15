@@ -1,5 +1,3 @@
-import React from 'react';
-
 const objectives = [
   { id: 1, goal: "Increase market share", target: 100, progress: 30, compliance: 30 },
   { id: 2, goal: "Improve customer satisfaction", target: 150000, progress: 50000, compliance: 33 },

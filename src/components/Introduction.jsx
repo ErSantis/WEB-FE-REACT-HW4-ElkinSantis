@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Introduction = () => {
   return (
     <section className="p-4 sm:p-6 text-center bg-digital-lavender-light">
