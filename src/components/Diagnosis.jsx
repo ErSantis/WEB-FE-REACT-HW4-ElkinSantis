@@ -42,7 +42,7 @@ const data = [
 const Diagnosis = () => {
   return (
     <section className="p-4 sm:p-6">
-      <h2 className="text-xl sm:text-2xl font-semibold">3. Current Diagnosis</h2>
+      <h2 className="text-xl sm:text-2xl font-semibold">1. Current Diagnosis</h2>
       <div className="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
         {data.map((category) => (
           <div key={category.id} className="border border-gray-300 p-4 rounded-lg bg-digital-lavender-very-light">
