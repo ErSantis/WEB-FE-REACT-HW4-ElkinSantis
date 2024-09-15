@@ -2,8 +2,8 @@ import React from 'react';
 
 const Identity = () => {
   return (
-    <section className="p-6">
-      <h2 className="text-2xl font-semibold">2. Organizational Identity</h2>
+    <section className="p-4 sm:p-6">
+      <h2 className="text-xl sm:text-2xl font-semibold">2. Organizational Identity</h2>
       <h3 className="font-semibold mt-4">Mission</h3>
       <p className="text-base sm:text-lg">
         To provide cutting-edge smartwatch technology that enhances users' health and lifestyle while staying connected to the world.
