@@ -1,54 +1,51 @@
 import React from 'react';
 
+const objectives = [
+  { id: 1, goal: "Increase market share", target: 100, progress: 30, compliance: 30 },
+  { id: 2, goal: "Improve customer satisfaction", target: 150000, progress: 50000, compliance: 33 },
+  { id: 3, goal: "Expand product line", target: 200, progress: 150, compliance: 75 },
+  { id: 4, goal: "Enhance brand awareness", target: 300000, progress: 250000, compliance: 83 },
+  { id: 5, goal: "Reduce operational costs", target: 500, progress: 100, compliance: 20 },
+  { id: 6, goal: "Increase online sales", target: 400000, progress: 300000, compliance: 75 },
+];
+
+const getStatusColor = (compliance) => {
+  if (compliance <= 35) return 'text-red-500'; // Critical
+  if (compliance <= 75) return 'text-orange-500'; // Acceptable
+  return 'text-green-500'; // Successful
+};
+
 const ProductTable = () => {
-return (
-  <table className="min-w-full border-collapse border border-gray-300 mt-4">
-    <thead>
-      <tr className="bg-blue-100">
-        <th className="border border-gray-300 p-2">Code</th>
-        <th className="border border-gray-300 p-2">Objective</th>
-        <th className="border border-gray-300 p-2">Goal</th>
-        <th className="border border-gray-300 p-2">Progress</th>
-        <th className="border border-gray-300 p-2">Completion</th>
-        <th className="border border-gray-300 p-2">Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td className="border border-gray-300 p-2">1000</td>
-        <td className="border border-gray-300 p-2">Launch the Pro Series</td>
-        <td className="border border-gray-300 p-2">500 units</td>
-        <td className="border border-gray-300 p-2">250 units</td>
-        <td className="border border-gray-300 p-2">50%</td>
-        <td className="border border-gray-300 p-2">Acceptable</td>
-      </tr>
-      <tr>
-        <td className="border border-gray-300 p-2">1001</td>
-        <td className="border border-gray-300 p-2">Expand to 3 new markets</td>
-        <td className="border border-gray-300 p-2">$1,000,000</td>
-        <td className="border border-gray-300 p-2">$50,000</td>
-        <td className="border border-gray-300 p-2">5%</td>
-        <td className="border border-gray-300 p-2">Critical</td>
-      </tr>
-      <tr>
-        <td className="border border-gray-300 p-2">1002</td>
-        <td className="border border-gray-300 p-2">Develop fitness partnerships</td>
-        <td className="border border-gray-300 p-2">1000 partners</td>
-        <td className="border border-gray-300 p-2">900 partners</td>
-        <td className="border border-gray-300 p-2">90%</td>
-        <td className="border border-gray-300 p-2">Successful</td>
-      </tr>
-      <tr>
-        <td className="border border-gray-300 p-2">1003</td>
-        <td className="border border-gray-300 p-2">Increase social media presence</td>
-        <td className="border border-gray-300 p-2">150,000 followers</td>
-        <td className="border border-gray-300 p-2">150,000 followers</td>
-        <td className="border border-gray-300 p-2">100%</td>
-        <td className="border border-gray-300 p-2">Successful</td>
-      </tr>
-    </tbody>
-  </table>
-);
+  return (
+    <section className="p-6">
+      <table className="min-w-full mt-4 border border-gray-300">
+        <thead>
+          <tr className="bg-gray-200 text-xs sm:text-base">
+            <th className="border border-gray-300 p-2">Code</th>
+            <th className="border border-gray-300 p-2">Objective</th>
+            <th className="border border-gray-300 p-2">Target</th>
+            <th className="border border-gray-300 p-2">Progress</th>
+            <th className="border border-gray-300 p-2">Compliance</th>
+            <th className="border border-gray-300 p-2">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {objectives.map(({ id, goal, target, progress, compliance }) => (
+            <tr key={id}>
+              <td className="border border-gray-300 p-2 text-xs sm:text-base">{id}</td>
+              <td className="border border-gray-300 p-2 text-xs sm:text-base">{goal}</td>
+              <td className="border border-gray-300 p-2 text-xs sm:text-base">${target.toLocaleString()}</td>
+              <td className="border border-gray-300 p-2 text-xs sm:text-base">${progress.toLocaleString()}</td>
+              <td className="border border-gray-300 p-2 text-xs sm:text-base">{compliance}%</td>
+              <td className={`border border-gray-300 p-2 text-xs sm:text-base ${getStatusColor(compliance)}`}>
+                {compliance <= 35 ? "Critical" : compliance <= 75 ? "Acceptable" : "Successful"}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  );
 };
 
 export default ProductTable;

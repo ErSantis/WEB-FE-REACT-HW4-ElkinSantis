@@ -2,17 +2,9 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="bg-gray-900 text-white py-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-3xl font-bold">Smartwatch Pro</h1>
-        <nav>
-          <ul className="flex space-x-6">
-            <li className="hover:text-gray-300">Home</li>
-            <li className="hover:text-gray-300">About</li>
-            <li className="hover:text-gray-300">Products</li>
-            <li className="hover:text-gray-300">Contact</li>
-          </ul>
-        </nav>
+    <header className="bg-digital-purple-light text-white py-4">
+      <div className="container mx-auto flex flex-col items-center justify-center text-center px-4 md:px-0">
+        <p className="text-lg mt-2 italic">The power on your wrist</p>
       </div>
     </header>
   );
